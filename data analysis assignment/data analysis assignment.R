@@ -1,4 +1,4 @@
-NBA.data<-read.table("data.txt")
+NBA.data<-read.table("dedomena analish.txt")
 
 names(NBA.data)<-c("name","heigth","num.match","time.min","age","points","assist","rebound","per.in.area","per.free.throws")
 
@@ -59,7 +59,7 @@ class(NBA.data$per.in.area)
 
 ###vriskw vasika perigrafika metra
 
-tab_df(summary(NBA.data[,-1]))## óõíïëéêÜ
+tab_df(summary(NBA.data[,-1]))## ÏƒÏ…Î½Î¿Î»Î¹ÎºÎ¬
 
 tab_df(t(t(summary(NBA.data[,-1]))[,c(-2,-3,-5)]))#perigrafika mono gia meso min kai max
 
@@ -85,23 +85,23 @@ boxplot(NBA.data[,9],ylim=range(NBA.data[,9]),main="boxplot for per.in.area")
 
 par(mfrow=c(2,2))
 
-hist(NBA.data[,2],ylim = c(0,35),main = "Éóôüãñáììá ãéá ýøïò",xlab = "Õøïò",ylab="Óõ÷íüôçôá",las=1,col="dark blue")
-hist(NBA.data[,3],ylim = c(0,40),main = "Éóôüãñáììá ãéá áñéèìü áãþíùí",xlab = "Áñéèìüò áãþíùí",ylab="Óõ÷íüôçôá",las=1,col="dark blue")
-hist(NBA.data$time.min,ylim = c(0,25),main = "Éóôüãñáììá áãùíéóôéêþí ëåðôþí",xlab = "×ñüíïò óå ëåðôÜ",ylab="Óõ÷íüôçôá",col="dark blue")
-hist(NBA.data$per.free.throws,main = "Éóôüãñáììá åëåõèÝñùí âïëþí",xlab = "Åëåýèåñåò âïëÝò",ylab="Óõ÷íüôçôá",col="dark blue",ylim = c(0,50),las=1)
+hist(NBA.data[,2],ylim = c(0,35),main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± ÏÏˆÎ¿Ï‚",xlab = "Î¥ÏˆÎ¿Ï‚",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",las=1,col="dark blue")
+hist(NBA.data[,3],ylim = c(0,40),main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± Î±ÏÎ¹Î¸Î¼ÏŒ Î±Î³ÏŽÎ½Ï‰Î½",xlab = "Î‘ÏÎ¹Î¸Î¼ÏŒÏ‚ Î±Î³ÏŽÎ½Ï‰Î½",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",las=1,col="dark blue")
+hist(NBA.data$time.min,ylim = c(0,25),main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î±Î³Ï‰Î½Î¹ÏƒÏ„Î¹ÎºÏŽÎ½ Î»ÎµÏ€Ï„ÏŽÎ½",xlab = "Î§ÏÏŒÎ½Î¿Ï‚ ÏƒÎµ Î»ÎµÏ€Ï„Î¬",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",col="dark blue")
+hist(NBA.data$per.free.throws,main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± ÎµÎ»ÎµÏ…Î¸Î­ÏÏ‰Î½ Î²Î¿Î»ÏŽÎ½",xlab = "Î•Î»ÎµÏÎ¸ÎµÏÎµÏ‚ Î²Î¿Î»Î­Ï‚",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",col="dark blue",ylim = c(0,50),las=1)
 
 par(mfrow=c(2,2))
 
-hist(NBA.data$points,main = "Éóôüãñáììá ãéá ðüíôïõò",xlab = "Ðüíôïé",ylab="Óõ÷íüôçôá",las=1,ylim=c(0,35),col="dark blue")
-hist(NBA.data$assist,main="Éóôüãñáììá ãéá assist",xlab = "asssist",ylab="Óõ÷íüôçôá",col="dark blue")
-hist(NBA.data$rebound,main="Éóôüãñáììá ãéá rebound",xlab="rebound",ylab="Óõ÷íüôçôá",ylim=c(0,35),col="dark blue")
-hist(NBA.data$per.in.area,main = "Éóôüãñáììá ðïóïóôïý åíôüò ôñéðüíôïõ",xlab="ðïóïóôïý åíôüò ôñéðüíôïõ",ylab="Óõ÷íüôçôá",ylim=c(0,50),col="dark blue")
+hist(NBA.data$points,main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± Ï€ÏŒÎ½Ï„Î¿Ï…Ï‚",xlab = "Î ÏŒÎ½Ï„Î¿Î¹",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",las=1,ylim=c(0,35),col="dark blue")
+hist(NBA.data$assist,main="Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± assist",xlab = "asssist",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",col="dark blue")
+hist(NBA.data$rebound,main="Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± rebound",xlab="rebound",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",ylim=c(0,35),col="dark blue")
+hist(NBA.data$per.in.area,main = "Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Ï€Î¿ÏƒÎ¿ÏƒÏ„Î¿Ï ÎµÎ½Ï„ÏŒÏ‚ Ï„ÏÎ¹Ï€ÏŒÎ½Ï„Î¿Ï…",xlab="Ï€Î¿ÏƒÎ¿ÏƒÏ„Î¿Ï ÎµÎ½Ï„ÏŒÏ‚ Ï„ÏÎ¹Ï€ÏŒÎ½Ï„Î¿Ï…",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",ylim=c(0,50),col="dark blue")
 
 
 
 par(mfrow=c(1,2))
 boxplot(NBA.data[,10],ylim=range(NBA.data[,10]),main="boxplot for per.free.throws")
-hist(NBA.data$age,main="Éóôüãñáììá ãéá çëéêßá",xlab="Çëéêßá",ylim=c(0,25),col="dark blue")
+hist(NBA.data$age,main="Î™ÏƒÏ„ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± Î·Î»Î¹ÎºÎ¯Î±",xlab="Î—Î»Î¹ÎºÎ¯Î±",ylim=c(0,25),col="dark blue")
 
 
 par(mfrow=c(1,2))
@@ -141,8 +141,8 @@ classheight<-cut(NBA.data$heigth,quantile(NBA.data$heigth),include.lowest = T)
 classheight
 
 par(mfrow=c(1,2))
-barplot(table(classage),main = "Ñáâäüãñáììá ãéá ïìáäïðïéçìÝíåò çëéêßåò",xlab = "ïìáäïðïéçìÝíåò çëéêßåò",ylab="Óõ÷íüôçôá",col = "red")
-barplot(table(classheight),ylim=c(0,35),xlab = "ïìáäïðïéçìÝíá ýøç",ylab = "Óõ÷íüôçôá",col="red",main = "Ñáâäüãñáììá ãéá ïìáäïðïéçìÝíá ýøç")
+barplot(table(classage),main = "Î¡Î±Î²Î´ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± Î¿Î¼Î±Î´Î¿Ï€Î¿Î¹Î·Î¼Î­Î½ÎµÏ‚ Î·Î»Î¹ÎºÎ¯ÎµÏ‚",xlab = "Î¿Î¼Î±Î´Î¿Ï€Î¿Î¹Î·Î¼Î­Î½ÎµÏ‚ Î·Î»Î¹ÎºÎ¯ÎµÏ‚",ylab="Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",col = "red")
+barplot(table(classheight),ylim=c(0,35),xlab = "Î¿Î¼Î±Î´Î¿Ï€Î¿Î¹Î·Î¼Î­Î½Î± ÏÏˆÎ·",ylab = "Î£Ï…Ï‡Î½ÏŒÏ„Î·Ï„Î±",col="red",main = "Î¡Î±Î²Î´ÏŒÎ³ÏÎ±Î¼Î¼Î± Î³Î¹Î± Î¿Î¼Î±Î´Î¿Ï€Î¿Î¹Î·Î¼Î­Î½Î± ÏÏˆÎ·")
 
 ###boxplot ana 2 mia katigorikh age kai mia posostikh
 par(mfrow=c(2,2))
@@ -196,7 +196,7 @@ shapiro.test(NBA.data$per.in.area) ## P value>0.05 DEN APORIPTW Ho
 shapiro.test(NBA.data$per.free.throws) ## P value<0.05 aporiptw Ho
 
 
-#######ó÷åóåéò áíá äõï############
+#######ÏƒÏ‡ÎµÏƒÎµÎ¹Ï‚ Î±Î½Î± Î´Ï…Î¿############
 install.packages("FSA")
 library(FSA)
 
